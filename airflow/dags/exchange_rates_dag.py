@@ -1,7 +1,6 @@
-from datetime import datetime, timedelta
+from datetime import datetime
 import pendulum
 import yaml
-from datetime import date
 
 from airflow import DAG
 from airflow.decorators import task

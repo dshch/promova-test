@@ -4,7 +4,6 @@ import requests
 import pendulum
 import datetime
 import json
-import time
 import os
 import io
 
@@ -44,7 +43,7 @@ class ExchangeRates():
 
     def process_data(self, date: str, rates: dict) -> pd.DataFrame:
         """
-        Processes dict to DataFrame and adds colums.
+        Processes dict to DataFrame and adds columns.
         :param date: data collection date.
         :param rates: dict with exchange rates.
         :return: processed data.
@@ -129,6 +128,10 @@ class ExchangeRates():
 
 
 def get_gcp_clients():
+    """
+    Creates clients instances from credential file.
+    :return: storage client, bigquery client.
+    """
     path = os.path.join('credentials', 'google-cloud-credentials.json')
     if os.path.exists(path):
         return storage.Client.from_service_account_json(path), bigquery.Client.from_service_account_json(path)
