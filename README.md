@@ -2,7 +2,7 @@
 
 Collects data for multiple dates.
 ```bash
-$ python app_keyword_ranking_current.py --start_date <YYYY-mm-dd> --end_date <YYYY-mm-dd> --login <login> --password <password> 
+$ python exchange_rates.py --start_date <YYYY-mm-dd> --end_date <YYYY-mm-dd> --app_id <app_id>
 ```
 Where:
 * `--app_id` - OpenExchangeRates App Id (API key).
